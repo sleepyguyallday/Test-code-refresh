@@ -1,0 +1,19 @@
+import discord
+from discord.ext    import commands
+from discord.ext.commands   import Bot
+import asyncio
+ 
+bot = commands.Bot(command_prefix='summon')
+ 
+@bot.event
+async def on_ready():
+    print ("Ate Shawie is Ready")
+ 
+ 
+@bot.event
+async def on_message(message):
+    if(message.channel.id == "419684199692369930"):
+        await bot.add_reaction(message, ":PepiFace:534937077696036864")
+ 
+ 
+bot.run("NTM0OTMwNjQ2OTkzNDY5NDUw.DyAyGA.z8BYllpmemNfMGK_zD9evnfEB3M")
